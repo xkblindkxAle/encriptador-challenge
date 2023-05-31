@@ -75,9 +75,12 @@ body{
     color: lightslategray;
 }
 .contenedor-texto-salida{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
     background: white;
     border-radius: 20px;
-    width: 30%;
+    width: 40%;
 }
 .contenedor-aviso{
     display: grid;
@@ -112,7 +115,7 @@ body{
     border: 2px solid royalblue;
     color: royalblue;
 }
-@media all and (max-width:768px){
+@media all and (max-width:800px){
     body{
         overflow-y: visible;
     }
@@ -124,21 +127,24 @@ body{
         padding: 0;
         
     }
+    .contenedor-texto-entrada{
+        width: 80%;
+        margin: 10px 20px 10px 5px;
+    }
     #texto-entrada{
-        font-size: 1.3rem;
-        width: 100%;
-        height: 600px;
-        resize: none;
-        border: none;
+        font-size: 1.2rem;
+        height: 400px;
         padding: 10px;
         background: none;
-        text-transform: lowercase;
+    }
+    .contenedor-botones{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
     }
     .contenedor-texto-salida{
         height: 400px;
-        width: 60%;
-        margin-left: 20px;
-        text-align: center;
+        width: 80%;
         font-size: .9rem;
         margin-bottom: 50px;
     }
@@ -158,5 +164,11 @@ body{
         color: royalblue;
         position: absolute;
         margin-top: 100px;
+    }
+}
+@media all and (max-width:480px){
+    #btn-encriptar,#btn-desencriptar{
+        font-size: 1rem;
+        width: 140px;
     }
 }
