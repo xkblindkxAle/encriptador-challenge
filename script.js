@@ -73,7 +73,7 @@ function desencriptar(desencriptar_){
 
 function btn_copiar(){
     salida.select();
-    navigator.clipboard.writeText(salida.value);
-    salida.value = "";
-    alert("Texto Copiado");
+    document.execCommand('copy');
+    salida.value = '';
+    alert('Texto copiado');
 }
